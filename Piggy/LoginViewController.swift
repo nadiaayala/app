@@ -18,6 +18,17 @@ class LoginViewController: UIViewController {
     
     @IBAction func loginPressed(_ sender: UIButton) {
         
+        Auth.auth().signIn(withEmail: emailTextField.text!, password: passwordTextField.text!) { (user, error) in
+            if error != nil {
+                print("Error")
+            }
+            else{
+                
+                self.performSegue(withIdentifier: "goToMain", sender: self)
+            }
+            
+        }
+        
     }
     
     override func viewDidLoad() {
