@@ -16,7 +16,10 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     
     
-//    @IBAction func registerPressed(_se) {
+    @IBAction func registerPressed(_ sender: UIButton) {
+        print("Clicked")
+    }
+    //    @IBAction func registerPressed(_se) {
 ////        Auth.auth().createUser(withEmail: emailTextField.text!, password: passwordTextField.text!) { (user, error) in
 ////            if error != nil {
 ////                print(error)
