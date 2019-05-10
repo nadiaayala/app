@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  LoginViewController.swift
 //  Piggy
 //
 //  Created by Nadia Ayala on 09/05/19.
@@ -9,8 +9,17 @@
 import UIKit
 import Firebase
 
-class ViewController: UIViewController {
-
+class LoginViewController: UIViewController {
+     
+    @IBOutlet weak var emailTextField: UITextField!
+    
+    @IBOutlet weak var passwordTextField: UITextField!
+    
+    
+    @IBAction func loginPressed(_ sender: UIButton) {
+        
+    }
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -18,7 +27,7 @@ class ViewController: UIViewController {
         
         print("Working")
     }
-
-
+    
+    
 }
 

@@ -7,15 +7,27 @@
 //
 
 import UIKit
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    
+    
 
     var window: UIWindow?
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+//        TODO: Initialise and Configure your Firebase here:
+        FirebaseApp.configure()
+//        This is reference to a brand new database within our Firebase
+//        
+                let myDatabase = Database.database().reference()
+
+                myDatabase.setValue("Ahlan!")
+        
         return true
     }
 
