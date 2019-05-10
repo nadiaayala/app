@@ -16,24 +16,23 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     
     
-    @IBAction func registerPressed(_ sender: Any) {
-        Auth.auth().createUser(withEmail: emailTextField.text!, password: passwordTextField.text!) { (user, error) in
-            if error != nil {
-                print(error)
-            }
-            else {
-                print("Registration successful!")
-            }
-        }
+//    @IBAction func registerPressed(_se) {
+////        Auth.auth().createUser(withEmail: emailTextField.text!, password: passwordTextField.text!) { (user, error) in
+////            if error != nil {
+////                print(error)
+////            }
+////            else {
+//                print("Registration successful!")
+////            }
+////        }
+    
         
-        
-    }
+//    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("Working")
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
+   
 }

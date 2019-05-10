@@ -24,9 +24,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FirebaseApp.configure()
 //        This is reference to a brand new database within our Firebase
 //        
-                let myDatabase = Database.database().reference()
-
-                myDatabase.setValue("Ahlan!")
+//                let myDatabase = Database.database().reference()
+//
+//                myDatabase.setValue("Ahlan!")
         
         return true
     }
