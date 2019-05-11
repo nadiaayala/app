@@ -38,7 +38,7 @@
                                                 <rect key="frame" x="0.0" y="50" width="286" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h7g-nm-fOo">
                                                 <rect key="frame" x="0.0" y="107" width="286" height="49"/>
@@ -49,7 +49,6 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="loginPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5VM-DY-jce"/>
-                                                    <segue destination="8Y2-xZ-rFH" kind="show" identifier="goToMain" id="azY-7V-wJF"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -102,11 +101,12 @@
                     <connections>
                         <outlet property="emailTextField" destination="c1f-5b-kA4" id="mah-yR-Ks6"/>
                         <outlet property="passwordTextField" destination="gKn-ja-xDU" id="D31-XK-7zP"/>
+                        <segue destination="8Y2-xZ-rFH" kind="show" identifier="goToMain" id="5D9-cW-fRC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="60" y="26.53673163418291"/>
+            <point key="canvasLocation" x="98" y="32"/>
         </scene>
         <!--PIGGY -->
         <scene sceneID="bq3-GN-Xs6">
@@ -188,7 +188,7 @@
                                         <color key="backgroundColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="j5U-VB-v1C">
                                         <rect key="frame" x="12" y="185" width="296" height="30"/>
@@ -210,7 +210,6 @@
                                         <connections>
                                             <action selector="loginPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3v3-sG-hwa"/>
                                             <action selector="registerPressed:" destination="1Ti-Vo-n2U" eventType="touchUpInside" id="RHl-F5-vV4"/>
-                                            <segue destination="8Y2-xZ-rFH" kind="show" identifier="goToMain" id="q5t-dd-qqd"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -245,11 +244,12 @@
                     <connections>
                         <outlet property="emailTextField" destination="j5U-VB-v1C" id="aJG-EV-2oF"/>
                         <outlet property="passwordTextField" destination="3ep-ew-uir" id="awm-SK-AzM"/>
+                        <segue destination="8Y2-xZ-rFH" kind="show" identifier="goToMainScreen" id="LWw-Hl-nRP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LEV-zy-RwH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="59" y="760"/>
+            <point key="canvasLocation" x="34" y="743"/>
         </scene>
         <!--User Logged View Controller-->
         <scene sceneID="jp5-Mf-2hp">
@@ -267,17 +267,28 @@
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m8t-Tm-yFS">
                                                 <rect key="frame" x="0.0" y="100" width="320" height="35"/>
+                                                <color key="backgroundColor" red="0.0" green="0.38164243650000002" blue="0.67476998730000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qsx-fn-bfB">
+                                                <rect key="frame" x="122" y="190" width="76" height="30"/>
+                                                <state key="normal" title="ADD GOAL"/>
+                                                <connections>
+                                                    <action selector="addGoalPressed:" destination="8Y2-xZ-rFH" eventType="touchUpInside" id="Onx-v0-uaA"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="m8t-Tm-yFS" firstAttribute="top" secondItem="qoc-O9-Ouv" secondAttribute="top" constant="100" id="0Dx-dq-0CA"/>
                                             <constraint firstItem="m8t-Tm-yFS" firstAttribute="leading" secondItem="qoc-O9-Ouv" secondAttribute="leading" id="ATU-59-Xqq"/>
+                                            <constraint firstAttribute="bottom" secondItem="Qsx-fn-bfB" secondAttribute="bottom" constant="16" id="KFC-cY-ggS"/>
                                             <constraint firstAttribute="trailing" secondItem="m8t-Tm-yFS" secondAttribute="trailing" id="NCS-NB-hzp"/>
                                             <constraint firstAttribute="bottom" secondItem="m8t-Tm-yFS" secondAttribute="bottom" constant="101" id="cjV-tH-Gpf"/>
+                                            <constraint firstAttribute="trailing" secondItem="Qsx-fn-bfB" secondAttribute="trailing" constant="122" id="ge4-D9-H6y"/>
+                                            <constraint firstItem="Qsx-fn-bfB" firstAttribute="leading" secondItem="qoc-O9-Ouv" secondAttribute="leading" constant="122" id="yPq-fY-x5k"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FTU-pz-XMA" userLabel="Piggy text">
@@ -294,14 +305,6 @@
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qsx-fn-bfB">
-                                        <rect key="frame" x="122" y="446" width="76" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="ADD GOAL"/>
-                                        <connections>
-                                            <action selector="addGoalPressed:" destination="8Y2-xZ-rFH" eventType="touchUpInside" id="Onx-v0-uaA"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.68707758043770806" green="0.37351070948824305" blue="0.72216053299492389" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
@@ -352,7 +355,7 @@
         <image name="logo2" width="64" height="64"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="azY-7V-wJF"/>
+        <segue reference="LWw-Hl-nRP"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.0" green="0.38164243650000002" blue="0.67476998730000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

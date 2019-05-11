@@ -9,11 +9,13 @@
 import UIKit
 import Firebase
 
-class UserLoggedViewController: UIViewController {
+class UserLoggedViewController: UIViewController, UIImagePickerControllerDelegate {
     
     
     @IBOutlet weak var goalText: UILabel!
-
+    
+    @IBOutlet weak var imageDisplay: UIImageView!
+    
     
     var goalsArray: [Goal] = [Goal]()
     
@@ -24,6 +26,7 @@ class UserLoggedViewController: UIViewController {
         
         let alert = UIAlertController(title: "Add goal ", message: "What is the goal you want to achieve?", preferredStyle: .alert)
         
+        
         //2. Add the text field. You can configure it however you need.
         alert.addTextField { (textField) in
             textField.text = "..."
@@ -32,7 +35,7 @@ class UserLoggedViewController: UIViewController {
         // 3. Grab the value from the text field, and print it when the user clicks OK.
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { [weak alert] (_) in
             let textField = alert?.textFields![0] // Force unwrapping because we know it exists.
-            let newGoal = Goal()
+//            let newGoal = Goal()
             
             let goalDB = Database.database().reference().child("Goals")
             
@@ -55,6 +58,11 @@ class UserLoggedViewController: UIViewController {
             }
         }))
         
+        let cancelAction = UIAlertAction(title: "Cancel", style: .destructive) { (action:UIAlertAction!) in
+            print("Cancel button tapped");
+        }
+        alert.addAction(cancelAction)
+        
         // 4. Present the alert.
         self.present(alert, animated: true, completion: nil)
         
@@ -62,7 +70,7 @@ class UserLoggedViewController: UIViewController {
     
     
     
-    func retrieveMessages(){
+    func retrieveGoal(){
         //Refer to our Goals database
         let goalDB = Database.database().reference().child("Goals")
         
@@ -71,26 +79,19 @@ class UserLoggedViewController: UIViewController {
             let snapshotValue = snapshot.value as! Dictionary<String,String>
             
             let text = snapshotValue["GoalBody"]!
-            let sender = snapshotValue["Sender"]!
-            
-//            let goal = Goal()
-//            goal.goalBody = text
-            
-//            self.goalText.text = goal.goalBody
             
             
-//            self.goalsArray.append(goal)
-            
-            
-            
-//            let newFrame = CGRect(x:0, y:0, width:100, height:100)
-//            self.goalDisplay.frame = newFrame
-            
-//            self.goalDisplay.text = self.goalsArray[0].goalBody
-            //We need to reformat the tableview because we are changing the content of the messages
-//            self.messageTableView.reloadData()
+//
         }
         
+    }
+    
+    func imagePickerController(picker: UIImagePickerController!, didFinishPickingImage image: UIImage!, editingInfo: NSDictionary!){
+        self.dismiss(animated: true, completion: { () -> Void in
+            
+        })
+        
+        imageDisplay.image = image
     }
     
 }
