@@ -108,7 +108,7 @@
             </objects>
             <point key="canvasLocation" x="60" y="26.53673163418291"/>
         </scene>
-        <!--View Controller-->
+        <!--PIGGY -->
         <scene sceneID="bq3-GN-Xs6">
             <objects>
                 <viewController id="ZA7-jw-ep8" sceneMemberID="viewController">
@@ -163,7 +163,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="d9R-7w-fql"/>
                     </view>
-                    <navigationItem key="navigationItem" id="eSj-Rt-Dvc"/>
+                    <navigationItem key="navigationItem" title="PIGGY " id="eSj-Rt-Dvc" userLabel="PIGGY"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DPb-dV-iaB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -251,15 +251,15 @@
             </objects>
             <point key="canvasLocation" x="59" y="760"/>
         </scene>
-        <!--View Controller-->
+        <!--User Logged View Controller-->
         <scene sceneID="jp5-Mf-2hp">
             <objects>
-                <viewController id="8Y2-xZ-rFH" sceneMemberID="viewController">
+                <viewController id="8Y2-xZ-rFH" customClass="UserLoggedViewController" customModule="Piggy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gyT-rR-gT3">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ULP-CO-XZ8" userLabel="CONTAINER">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ULP-CO-XZ8" userLabel="CONTAINER" customClass="User">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qoc-O9-Ouv">
@@ -294,6 +294,14 @@
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qsx-fn-bfB">
+                                        <rect key="frame" x="122" y="446" width="76" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="ADD GOAL"/>
+                                        <connections>
+                                            <action selector="addGoalPressed:" destination="8Y2-xZ-rFH" eventType="touchUpInside" id="Onx-v0-uaA"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.68707758043770806" green="0.37351070948824305" blue="0.72216053299492389" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
@@ -343,4 +351,5 @@
     <inferredMetricsTieBreakers>
         <segue reference="azY-7V-wJF"/>
     </inferredMetricsTieBreakers>
+    <color key="tintColor" red="0.0" green="0.38164243650000002" blue="0.67476998730000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>
