@@ -49,7 +49,7 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="loginPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5VM-DY-jce"/>
-                                                    <segue destination="8Y2-xZ-rFH" kind="show" identifier="goToMain" id="T2W-ft-l67"/>
+                                                    <segue destination="8Y2-xZ-rFH" kind="show" identifier="goToMain" id="azY-7V-wJF"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -341,6 +341,6 @@
         <image name="logo2" width="64" height="64"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="q5t-dd-qqd"/>
+        <segue reference="azY-7V-wJF"/>
     </inferredMetricsTieBreakers>
 </document>

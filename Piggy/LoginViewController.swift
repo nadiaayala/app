@@ -22,10 +22,10 @@ class LoginViewController: UIViewController {
             if error != nil {
                 print("Error")
             }
-            else{
-                
-                self.performSegue(withIdentifier: "goToMain", sender: self)
-            }
+//            else{
+//                
+//                self.performSegue(withIdentifier: "goToMain", sender: self)
+//            }
             
         }
         
