@@ -10,5 +10,5 @@ import UIKit
 
 class Goal {
     var goalBody: String = ""
-
+    var goalPrice: String = ""
 }

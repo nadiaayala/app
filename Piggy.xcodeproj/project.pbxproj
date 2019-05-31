@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0806136C229EC9A5005F66BE /* Chore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0806136B229EC9A5005F66BE /* Chore.swift */; };
 		0806136E229ECB26005F66BE /* ChoresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0806136D229ECB26005F66BE /* ChoresViewController.swift */; };
+		0806137022A05ECD005F66BE /* homeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0806136F22A05ECC005F66BE /* homeScreenViewController.swift */; };
 		08136DE122849AA100828004 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08136DE022849AA100828004 /* AppDelegate.swift */; };
 		08136DE322849AA100828004 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08136DE222849AA100828004 /* ViewController.swift */; };
 		08136DE622849AA100828004 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08136DE422849AA100828004 /* Main.storyboard */; };
@@ -25,6 +26,7 @@
 /* Begin PBXFileReference section */
 		0806136B229EC9A5005F66BE /* Chore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chore.swift; sourceTree = "<group>"; };
 		0806136D229ECB26005F66BE /* ChoresViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoresViewController.swift; sourceTree = "<group>"; };
+		0806136F22A05ECC005F66BE /* homeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeScreenViewController.swift; sourceTree = "<group>"; };
 		08136DDD22849AA100828004 /* Piggy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Piggy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		08136DE022849AA100828004 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		08136DE222849AA100828004 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 				082A702D2284B026009AFE68 /* LoginViewController.swift */,
 				081929E92286E29F00DB4E02 /* UserLoggedViewController.swift */,
 				0806136D229ECB26005F66BE /* ChoresViewController.swift */,
+				0806136F22A05ECC005F66BE /* homeScreenViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -270,6 +273,7 @@
 				082A702E2284B026009AFE68 /* LoginViewController.swift in Sources */,
 				08136DE322849AA100828004 /* ViewController.swift in Sources */,
 				08136DE122849AA100828004 /* AppDelegate.swift in Sources */,
+				0806137022A05ECD005F66BE /* homeScreenViewController.swift in Sources */,
 				082A70312284BDC2009AFE68 /* RegisterViewController.swift in Sources */,
 				0806136C229EC9A5005F66BE /* Chore.swift in Sources */,
 				081929EA2286E29F00DB4E02 /* UserLoggedViewController.swift in Sources */,

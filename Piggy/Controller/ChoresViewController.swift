@@ -100,6 +100,9 @@ class ChoresViewController: UITableViewController {
         let chore = chores?[indexPath.row]
         cell.textLabel?.text = chore?.title ?? "No chores added yet"
         
+        
+     
+        
 //        cell.accessoryType = (chore?.done)! ? .checkmark : .none
         if (chore?.done == false){
             cell.accessoryType = .checkmark
